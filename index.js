@@ -42,15 +42,14 @@ function handleTODOCreation(msg) {
         }
 }
 
-inputField.onkeyup = function(e) {
-    var inputTextValue = e.target.value;
+inputField.onkeyup = function(e) {   
+   var inputTextValue = inputField.value;
     if(e.key === 'Enter') {
         handleTODOCreation(inputTextValue);
     }
 }
-
 var btnAddTODO = document.getElementById('btn-add-todo');
 btnAddTODO.onclick = function(e) {
-    var inputTextValue = e.target.value;
+    var inputTextValue = inputField.value;
     handleTODOCreation(inputTextValue);
 }
